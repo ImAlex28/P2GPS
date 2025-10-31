@@ -1,9 +1,4 @@
-FROM tomcat:7-jre8
-
-MAINTAINER juliens@microsoft.com
-
-COPY drop/* /usr/local/tomcat/webapps/
-
-EXPOSE 8080
-
-ENTRYPOINT catalina.sh run
+FROM mongo:3.4 
+COPY drop/* usr/local/data/db/ 
+#es como Entrypoint, pero CMD se puede sobreescribir con otro comando al ejecutar el contenedor 
+CMD ["mongod", "--smallfiles", "--rest"]
