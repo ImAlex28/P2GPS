@@ -2,7 +2,6 @@ version: "3"
 services:
   mongo:  
     image: imalex28/p2gps:db 
-    command: ["mongod"] # Para que no falle al iniciar el contenedor
     deploy: 
       replicas: 1 # para escabilidad del servicio.  
       resources: 
