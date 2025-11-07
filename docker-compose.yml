@@ -16,7 +16,7 @@ services:
     volumes: 
       - "db-data:/data/db" # para guardar en local los cambios en el contenedor 
   order: 
-    image: imalex28/p2gps:order 
+    image: imalex28/p2gps:order
     depends_on: 
       - "mongo"  #le pasamos al servicio order la IP del servicio mongo 
     deploy: 
